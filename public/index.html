@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My First App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>My First App</h1>
+    <p class="subtitle">Type something, hit submit, and the backend will respond.</p>
+
+    <form id="message-form" class="form">
+      <input
+        id="user-input"
+        type="text"
+        placeholder="Enter your message..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+
+    <section class="response" aria-live="polite">
+      <h2>Response</h2>
+      <div id="response-area" class="response-area">Waiting for input...</div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
