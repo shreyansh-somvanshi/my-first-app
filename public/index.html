@@ -3,30 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My First App</title>
+  <title>The Roast Machine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="container">
-    <h1>My First App</h1>
-    <p class="subtitle">Type something, hit submit, and the backend will respond.</p>
+  <div class="stage" aria-hidden="true"></div>
+
+  <main class="card">
+    <div class="mic" aria-hidden="true">🎤</div>
+    <h1 class="title">
+      The <em>Roast</em><br />Machine
+    </h1>
+    <p class="subtitle">Step up to the mic. We'll do the rest.</p>
 
     <form id="message-form" class="form">
       <input
         id="user-input"
         type="text"
-        placeholder="Enter your message..."
+        placeholder="Say something. Anything. We'll find what's wrong with it."
         autocomplete="off"
         required
       />
-      <button type="submit" id="submit-btn">Submit</button>
+      <button type="submit" id="submit-btn">
+        <span class="btn-label">Roast me</span>
+        <span class="btn-icon" aria-hidden="true">🔥</span>
+      </button>
     </form>
 
     <section class="response" aria-live="polite">
-      <h2>Response</h2>
-      <div id="response-area" class="response-area">Waiting for input...</div>
+      <div id="response-area" class="response-area empty">
+        Your roast will appear here. Probably warranted.
+      </div>
     </section>
   </main>
+
+  <footer class="footnote">
+    No feelings were spared in the making of this app.
+  </footer>
 
   <script src="app.js"></script>
 </body>
